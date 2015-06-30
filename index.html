@@ -1,0 +1,87 @@
+﻿<html ng-app="ShoppingList">
+<head>
+	<meta charset="utf-8">
+	<title>{{"Shopping List"| i18n}}</title>
+
+	<!-- Adicionando Framework Bootstrap -->
+	<link rel="stylesheet" type="text/css" href="lib/bootstrap/bootstrap.css">
+
+	<style>
+		.jumbotron {
+			width: 400px;
+			text-align: center;
+			margin-top: 20px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		.table {
+			margin-top: 20px;
+		}
+		.form-control {
+			margin-bottom: 5px;
+		}
+		.selecionado {
+			background-color: yellow;
+		}
+		.negrito {
+			font-weight: bold;
+		}
+	</style>
+
+	<!--Adicionando Framework Angular JS -->
+	<script src="lib/angular/angular.js"></script>
+
+	<!-- Arquivo de localização referente ao país -->
+	<script id="locale" src="lib/angular/angular-locale_pt-br.js"></script>
+
+	<!--<script src="lib/angular/angular-locale_en-us.js"></script>-->
+
+	<!--<script src="lib/angular/angular-locale_fr-fr.js"></script>-->
+
+	<!--Caminho do módulo jlg-i18n-->
+	<script src="bower_components/jlg-i18n/jlg-i18n.min.js"></script>
+
+	<!-- Adicionando Jquery -->
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	
+	<!-- Adicionando o arquivo module -->
+	<script src="js/module.js"></script>
+
+	<!-- Adicionando o arquivo service -->
+	<script src="js/service.js"></script>
+
+</head>
+
+<body ng-controller="shoppingListCtrl">
+
+	<div class="jumbotron">
+		<h2>{{app | i18n}}</h2>
+
+		<table ng-show="list.length > 0" class="table">
+			<tr>
+				<th>{{'Name' | i18n}}</th>
+				<th>{{'Price' | i18n}}</th>
+				<th>{{'Date' | i18n}}</th>
+			</tr>
+
+			<tr ng-repeat="product in list">
+				<td>{{product.name | i18n}}</td>
+				<td>{{currency(product.price)}}</td>
+				<td>{{product.date | date }} </td>
+			</tr>
+		</table>
+
+
+        <p>{{'Locale' | i18n}}: {{locale.id}}</p>
+        <div>
+            <label ng-repeat="id in ['en-us', 'pt-br', 'fr-fr']">
+          			<input name="locale_id" type="radio"
+                    ng-click="changeLocale(id)"
+                    ng-checked="{{locale.id == id}}"/>
+                    {{id}}
+            </label>
+        </div>
+
+</body>
+</html>
+

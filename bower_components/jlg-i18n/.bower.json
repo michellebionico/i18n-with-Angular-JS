@@ -1,0 +1,48 @@
+{
+  "name": "jlg-i18n",
+  "description": "Angular module for i18n, with pluralization and interpolation.",
+  "main": "src/jlg-i18n.js",
+  "license": "MIT",
+  "ignore": [
+    "node_modules",
+    "bower_components",
+    "test",
+    "example",
+    "scripts",
+    "package.json",
+    "Gruntfile.js",
+    ".gitignore"
+  ],
+  "keywords": [
+    "i18n",
+    "angular",
+    "pluralization",
+    "interpolation",
+    "locale"
+  ],
+  "authors": [
+    "Yannis THOMIAS <thomias.yannis@gmail.com>",
+    "Jean-Louis GUENEGO <jlguenego@gmail.com>",
+    "Juan TROCHEZ <juan.trochez95@gmail.com>"
+  ],
+  "homepage": "https://github.com/jlguenego/jlg-i18n",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:jlguenego/jlg-i18n.git"
+  },
+  "devDependencies": {
+    "angular": "~1.3.x",
+    "angular-i18n": "~1.3.x"
+  },
+  "version": "0.0.2",
+  "_release": "0.0.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.0.2",
+    "commit": "f51d3aff2e3cfb006c9daab4de08263b87f289a3"
+  },
+  "_source": "git://github.com/jlguenego/jlg-i18n.git",
+  "_target": "~0.0.2",
+  "_originalSource": "jlg-i18n",
+  "_direct": true
+}
